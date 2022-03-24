@@ -4,11 +4,13 @@ import { DevExtremeModule} from 'devextreme-angular';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { ClienteComponent } from './cliente/cliente.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ClienteComponent
   ],
   imports: [
     BrowserModule,
