@@ -3,6 +3,7 @@ import { NgModule, ViewChild, enableProdMode,} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { DxDrawerComponent, DxDrawerModule, DxListModule, DxRadioGroupModule, DxToolbarModule,} from 'devextreme-angular';
+import { ClienteServiceService } from '../services/cliente-service.service';
 @Component({
   selector: 'app-cliente',
   templateUrl: './cliente.component.html',
@@ -10,7 +11,9 @@ import { DxDrawerComponent, DxDrawerModule, DxListModule, DxRadioGroupModule, Dx
 })
 export class ClienteComponent implements OnInit {
 
-  constructor() { }
+  constructor(private cliente: ClienteServiceService) {
+    cliente.getClientes().subscribe( response => (console.log(response)))
+   }
 
   ngOnInit(): void {
   }
