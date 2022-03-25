@@ -1,0 +1,16 @@
+<div *ngFor="let elem of lista">
+    {{elem.nombres}}
+</div>
+<div>
+    <button class="btn-success">Nuevo</button>
+</div>
+<div>
+    <table class="table table-striped">
+    <tr>
+      <th *ngFor="let columna of TableHead" scope="col">{{columna}}</th>
+    </tr>
+  <tr *ngFor="let elem of lista">
+      <td *ngFor="let columna of TableHead">{{elem[columna]}}</td>
+  </tr>
+</table>
+</div>
